@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Water Use in the Netherlands</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f5f7fb;
+        color: #222;
+      }
+
+      header {
+        background: #0052a5;
+        color: #fff;
+        padding: 1.5rem 1rem;
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 0 0 0.25rem;
+        font-size: 1.8rem;
+      }
+
+      header p {
+        margin: 0;
+        font-size: 0.95rem;
+        opacity: 0.9;
+      }
+
+      main {
+        max-width: 960px;
+        margin: 2rem auto;
+        padding: 0 1rem 3rem;
+      }
+
+      section {
+        margin-bottom: 2.5rem;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+        color: #003366;
+      }
+
+      p {
+        line-height: 1.5;
+        font-size: 0.95rem;
+      }
+
+      .plot {
+        background: #fff;
+        border-radius: 8px;
+        padding: 1rem 1rem 1.5rem;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+        margin-top: 1rem;
+      }
+
+      .plot img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px;
+      }
+
+      .caption {
+        font-size: 0.85rem;
+        color: #555;
+        margin-top: 0.5rem;
+      }
+
+      footer {
+        text-align: center;
+        padding: 1rem;
+        font-size: 0.8rem;
+        color: #777;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Water Use in the Netherlands</h1>
+      <p>Analysis with Python, NumPy, Pandas, and Matplotlib</p>
+    </header>
+
+    <main>
+      <section>
+        <h2>About this project</h2>
+        <p>
+          This project explores water use in the Dutch economy using official
+          statistics. The Python script loads raw CSV data, cleans and
+          aggregates it with Pandas and NumPy, and generates visual summaries
+          with Matplotlib and Seaborn. The plots below are saved by
+          <code>main.py</code> into the <code>plots/</code> folder and embedded
+          here.
+        </p>
+      </section>
+
+      <section>
+        <h2>Water use by source (Total Dutch economy)</h2>
+        <p>
+          Evolution of tap water, groundwater, and surface water use (million
+          m<sup>3</sup>) for the total Dutch economy over time.
+        </p>
+        <div class="plot">
+          <img
+            src="../Website/plots/water_trends.png"
+            alt="Water use by source - Total Dutch economy"
+          />
+          <div class="caption">
+            Figure 1 &mdash; Trends in water abstraction by source.
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Households vs all economic activities</h2>
+        <p>
+          Comparison of total water abstraction for private households versus
+          all economic activities (A&ndash;U) in the Netherlands.
+        </p>
+        <div class="plot">
+          <img
+            src="../Website/plots/households_vs_activities.png"
+            alt="Households vs all economic activities"
+          />
+          <div class="caption">
+            Figure 2 &mdash; Water use for households compared with all
+            activities.
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Fresh vs salt surface water</h2>
+        <p>
+          Use of fresh and salt surface water by the total Dutch economy,
+          highlighting the relative importance of each source.
+        </p>
+        <div class="plot">
+          <img
+            src="../Website/plots/fresh_vs_salt_surface.png"
+            alt="Fresh vs salt surface water"
+          />
+          <div class="caption">
+            Figure 3 &mdash; Fresh versus salt surface water use.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      Data sources: CBS, EEA, OECD (Netherlands). Plots generated with
+      Python/Matplotlib.
+    </footer>
+  </body>
+  </html>
